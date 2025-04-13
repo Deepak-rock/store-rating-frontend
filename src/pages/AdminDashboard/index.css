@@ -1,0 +1,123 @@
+.admin-dashboard {
+  background-color: #f9f9f9;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.respon-container {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+}
+
+.left-container {
+  background-color: #f0f0f0;
+  align-self: flex-start;
+  width: 40%;
+  min-height: 90vh;
+  padding: 20px;
+}
+
+.dashboard-heading {
+  font-size: 18px;
+  margin-bottom: 30px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.dashboard-cards-con {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.dashboard-card {
+  padding: 0 0 10px 0;
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.stats {
+  color: #181818;
+  font-size: 26px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.stats-name {
+  color: #181818;
+  font-size: 18px;
+  margin: 0;
+}
+
+.dashboard-error {
+  color: 'red';
+  text-align: center;
+}
+
+.right-container {
+  background-color: #ee3f3f;
+  align-self: flex-start;
+  width: 60%;
+  min-height: 90vh;
+  padding: 20px;
+}
+
+.tags-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 20px 0;
+}
+
+.tag-btn {
+  height: 30px;
+  width: 80px;
+  background-color: #ddd;
+  color:#000;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 7px;
+}
+
+.active-tag-btn {
+  height: 30px;
+  width: 80px;
+  background-color: #3f3e3e;
+  color:#ffffff;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 7px;
+}
+
+@media screen and (min-width: 768px) {
+  .left-container{
+    padding: 20px 40px;
+    margin: 40px 0 40px 20px;
+    width: 30%;
+    height: 80vh;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .right-container{
+    padding: 20px 40px;
+    margin: 40px 20px 40px 0;
+    width: 70%;
+    height: 80vh;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .dashboard-heading {
+    font-size: 22px;
+  }
+}

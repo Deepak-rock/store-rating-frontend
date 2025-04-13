@@ -1,0 +1,49 @@
+.tab-heading {
+  color: #f9f9f9;
+  font-size: 18px;
+}
+
+.add-user-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #94a3b8;
+  outline: none;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  color: #181818;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.add-user-btn {
+  text-align: center;
+  width: 100%;
+  padding: 12px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #3b82f6;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.check-box {
+  cursor: pointer;
+}
+
+.show-label {
+  color: #f9f9f9;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}

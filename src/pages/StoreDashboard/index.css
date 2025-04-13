@@ -1,0 +1,62 @@
+.store-panel-container {
+  padding: 20px;
+  background-color: #f5f7fb;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.row-con {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.update-password {
+  background-color: #15b822;  
+  color: #fff;
+  font-size: 16px;
+  border-radius: 7px;
+  border:none;
+  outline: none;
+  padding: 7px 10px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+.average-rating {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.ratings-list {
+  list-style: none;
+  padding: 0;
+}
+
+.rating-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-bottom: 16px;
+  padding: 16px;
+}
+
+.rating-info h3 {
+  margin: 0;
+}
+
+.rating-value {
+  margin-top: 8px;
+  color: #555;
+}
+.trigger-button {
+  background-color: #0a9dff;  
+  color: #fff;
+  font-size: 16px;
+  border-radius: 7px;
+  border:none;
+  outline: none;
+  padding: 7px 10px;
+  margin: 10px 0;
+  cursor: pointer;
+}

@@ -1,0 +1,36 @@
+.password-form {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 0 12px rgba(0,0,0,0.08);
+  max-width: 400px;
+}
+  
+.password-form h3 {
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.password-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.password-form button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #333;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.form-message {
+  margin-top: 12px;
+  color: #e63946;
+}
