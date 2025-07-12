@@ -10,6 +10,7 @@ import StoreDashboard from './pages/StoreDashboard';
 import ProtectedRoute from './components/ProtectedRoute';
 import UpdatePasswordForm from './components/UpdatePassword'
 import './App.css';
+import NotFound from './components/NotFound';
 
 const App = () => {
   const token = Cookies.get('jwt_token');
@@ -23,6 +24,7 @@ const App = () => {
 
   return (
     <Routes>
+      <Route path='/' element={<NotFound />}/>
       <Route path="/login" element={token ? redirectDashboard() : <LogInForm />} />
       <Route path="/signin" element={token ? redirectDashboard() : <SignInForm />} />
       
