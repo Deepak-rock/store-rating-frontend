@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
 import Popup from 'reactjs-popup'
-import { FaStar } from "react-icons/fa";
-import { FaLocationDot } from "react-icons/fa6";
+import {FaStar} from "react-icons/fa";
+import {FaLocationDot} from "react-icons/fa6";
 import Header from '../../components/Header';
 import UpdatePasswordForm from '../../components/UpdatePassword';
 
@@ -10,8 +10,7 @@ import './index.css';
 
 const NormalUser = () => {
   const [storeData, setStoreData] = useState(null);
-  const [nameSearch, setNameSearch] = useState('');
-  const [addressSearch, setAddressSearch] = useState('');
+  const [searchQuery, setSearchQuery] = useState('');
   const [error, setError] = useState('');
 
   const token = Cookies.get('jwt_token');
@@ -20,7 +19,7 @@ const NormalUser = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/stores?name=${nameSearch}&address=${addressSearch}`, {
+        const response = await fetch(`https://store-rating-backend-19k6.onrender.com/stores?name=${searchQuery}&address=${searchQuery}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -43,11 +42,11 @@ const NormalUser = () => {
     if (token) {
       fetchData();
     }
-  }, [token, nameSearch, addressSearch]);
+  }, [token, searchQuery]);
 
   const submitRating = async (storeId, userRating) => {
     try {
-      const response = await fetch(`http://localhost:8000/stores/${storeId}/rate`, {
+      const response = await fetch(`https://store-rating-backend-19k6.onrender.com/stores/${storeId}/rate`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -57,8 +56,7 @@ const NormalUser = () => {
       });
       const result = await response.json();
       console.log(result.message);
-      setNameSearch(nameSearch);
-      addressSearch(addressSearch);
+      setSearchQuery(setSearchQuery);
     } catch (err) {
       setError('Unable to submit rating');
     }
@@ -100,15 +98,8 @@ const NormalUser = () => {
             <input
               type="text"
               placeholder="Search by name"
-              value={nameSearch}
-              onChange={(e) => setNameSearch(e.target.value)}
-              className="search-input"
-            />
-            <input
-              type="text"
-              placeholder="Filter by address"
-              value={addressSearch}
-              onChange={(e) => setAddressSearch(e.target.value)}
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
               className="search-input"
             />
           </div>

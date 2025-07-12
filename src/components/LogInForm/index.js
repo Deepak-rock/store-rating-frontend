@@ -40,7 +40,7 @@ const LogInForm = () => {
   const onSubmitForm = async event => {
     event.preventDefault()
     try {
-      const apiUrl = 'http://localhost:8000/login';
+      const apiUrl = 'https://store-rating-backend-19k6.onrender.com/login';
       const response = await fetch(apiUrl ,{
         method: 'POST',
         headers: {'Content-Type': 'application/json'},

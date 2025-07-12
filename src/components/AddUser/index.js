@@ -17,7 +17,7 @@ const AddUser = () => {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      const res = await fetch('http://localhost:8000/admin/users', {
+      const res = await fetch('https://store-rating-backend-19k6.onrender.com/admin/users', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -35,10 +35,10 @@ const AddUser = () => {
   return (
     <form onSubmit={handleSubmit} className="add-user-form">
       <h2 className="tab-heading">Add User</h2>
-      <input name="name" placeholder="Name" onChange={handleChange} className="add-user-input" />
-      <input name="email" placeholder="Email" onChange={handleChange} className="add-user-input"/>
-      <input name="password" placeholder="Password" type={showPassword ? "text" : "password"} onChange={handleChange} className="add-user-input"/>
-      <input name="address" placeholder="Address" onChange={handleChange} className="add-user-input"/>
+      <input name="name" placeholder="Name" onChange={handleChange} required className="add-user-input" />
+      <input name="email" placeholder="Email" onChange={handleChange} required className="add-user-input"/>
+      <input name="password" placeholder="Password" type={showPassword ? "text" : "password"} required onChange={handleChange} className="add-user-input"/>
+      <input name="address" placeholder="Address" onChange={handleChange} required className="add-user-input"/>
       <select name="role" onChange={handleChange} className="add-user-input">
         <option value="normal">Normal User</option>
         <option value="admin">Admin</option>

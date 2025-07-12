@@ -16,7 +16,7 @@ const StoreDashboard = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch('http://localhost:8000/store/dashboard', {
+        const res = await fetch('https://store-rating-backend-19k6.onrender.com/store/dashboard', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',

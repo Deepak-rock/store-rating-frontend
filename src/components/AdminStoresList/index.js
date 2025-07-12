@@ -9,7 +9,7 @@ const AdminStores = () => {
 
   const fetchStores = useCallback(async () => {
     try {
-      const response = await fetch('http://localhost:8000/admin/stores', {
+      const response = await fetch('https://store-rating-backend-19k6.onrender.com/admin/stores', {
         headers: {
           Authorization: `Bearer ${token}`,
         },

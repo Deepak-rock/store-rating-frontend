@@ -32,7 +32,7 @@ const SignInForm = () => {
 
       const {name, email, password, address, role} = formData;
 
-      const apiUrl = 'http://localhost:8000/register';
+      const apiUrl = 'https://store-rating-backend-19k6.onrender.com/register';
       const response = await fetch(apiUrl ,{
         method: 'POST',    
         headers: {'Content-Type': 'application/json'},

@@ -18,7 +18,7 @@ const AdminDashboard = () => {
   useEffect(() => {
     const fetchDashboardData = async () => {
       try {
-        const response = await fetch('http://localhost:8000/admin/dashboard', {
+        const response = await fetch('https://store-rating-backend-19k6.onrender.com/admin/dashboard', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',

@@ -17,7 +17,7 @@ const UpdatePasswordForm = () => {
     }
 
     try {
-      const res = await fetch('http://localhost:8000/password', {
+      const res = await fetch('https://store-rating-backend-19k6.onrender.com/password', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

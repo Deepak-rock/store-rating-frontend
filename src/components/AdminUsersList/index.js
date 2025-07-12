@@ -13,7 +13,7 @@ const AdminUsers = () => {
     const fetchUsers = async () => {
       const query = new URLSearchParams(filters).toString();
       try {
-        const response = await fetch(`http://localhost:8000/admin/users?${query}`, {
+        const response = await fetch(`https://store-rating-backend-19k6.onrender.com/admin/users?${query}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
